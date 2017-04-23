@@ -1,0 +1,6 @@
+Watson IoT with Common Lisp
+===========================
+Frederico Munoz <frederico.munoz@pt.ibm.com>
+
+This is an example of using MQTT with IBM Watson IoT; it uses
+Quicklisp so dependencies are automatically fetched.
