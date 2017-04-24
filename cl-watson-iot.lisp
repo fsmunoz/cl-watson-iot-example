@@ -1,5 +1,8 @@
 ;;;; cl-watson-iot.lisp
 ;;;; Watson IoT MQTT messaging example
+;;;; 
+;;;; This code was made to complement the following article
+;;;; https://developer.ibm.com/recipes/tutorials/watson-iot-with-common-lisp/
 ;;;;
 ;;;; Author: Frederico Munoz <frederico.munoz@pt.ibm.com>
 ;;;; Date: APR 2017
@@ -11,17 +14,22 @@
 
 ;; Some global variables to simplify usage
 
-(defparameter *org-id* "72o9h9" "Org ID")
+;; Set *org-id* to your Org ID
+(defvar *org-id*)
+;; Set *password* to your own token
+(defvar *password*)
+;; Change if using a different Device Type name
+(defparameter *device-id* "cl1" "Device ID")
+
+(defparameter *username* "use-token-auth")
 (defparameter *uri*
   (format nil "https://~A.messaging.internetofthings.ibmcloud.com:8883/api/v0002" *org-id*)
   "REST API URI")
 (defparameter *device-type* "lispything" "Device Type")
-(defparameter *device-id* "cl1" "Device ID")
 (defparameter *mqtt-topic-name* "iot-2/evt/temp/fmt/json")
 (defparameter *broker-url* (format nil "ssl://~A.messaging.internetofthings.ibmcloud.com:8883" *org-id*))
 (defparameter *client-id* (format nil "d:~A:~A:~A" *org-id* *device-type* *device-id*))
-(defparameter *username* "use-token-auth")
-(defparameter *password* "01234567")
+
 
 
 ;; REST API Example 
