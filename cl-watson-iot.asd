@@ -1,9 +1,9 @@
 ;;;; cl-watson-iot.asd
 
 (asdf:defsystem #:cl-watson-iot
-  :description "Describe cl-watson-iot here"
-  :author "Your Name <your.name@example.com>"
-  :license "Specify license here"
+  :description "Watson IoT interaction with Common Lisp"
+  :author "Frederico Muñoz <frederico.munoz@pt.ibm.com>"
+  :license "EPL"
   :defsystem-depends-on (:abcl-asdf)
   :depends-on (#:drakma)
   :serial t
